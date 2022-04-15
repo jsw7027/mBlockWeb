@@ -65,26 +65,95 @@
 </script>
 
 	<style type="text/css">
-
-		a{
+a {
 			text-decoration: none;
 		}
 
+		#head{
+			position: fixed;
+		}
 		.head_item_logo{
 			float: left;
-			margin-right: 700px;
 			padding-left: 60px;
 			color: black;
 		}
 
-		.head_item{
-			padding-top: 10px;
+				.head_item{
 			float: left;
 			margin-right: 50px;
 			font-size: 20px;
 			font-weight: bold;
-			margin-bottom: 80px;
 
+		}
+		#nav{
+			list-style: none;
+			height: 40px;
+			padding:5px 1px;
+			margin:0;
+		}
+
+		#nav li{
+			float: right;
+			margin:15px 20px;
+			width: 140px;
+			padding:0;
+		}
+
+		#nav li a{
+			display: block;
+			font-weight: bold;
+			font-size: 18px;
+			padding: 7px 8px;
+			margin:0;
+			text-decoration: none;
+			color: black;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+		}
+
+		#nav li:hover > a {
+			color:black;
+			margin:0;
+			padding:; 5px;
+		}
+
+		#nav li:hover ul{
+			opacity: 1;
+			height:120px;
+		}
+
+		#nav li:hover ul li{
+			height: 35px;
+			overflow: visible;
+			padding=0;
+		}
+
+		#nav ul{
+			list-style: none;
+			padding:0;
+			position: relative;
+			left:0px;
+			width: 225px;
+			opacity: 0;
+			height:0;
+		}
+
+		#nav ul li {
+			float: none;
+			margin:0;
+			margin-top: 15px;
+			padding: 0;
+			font-size: 10px;
+
+		}
+
+		#nav ul a{
+			font-weight: normal;
+			color: black;
+		}
+
+		#nav ul li:hover a{
+			font-weight: bold;
+			width: 225px;
 		}
 
 		#crewTop {
@@ -137,10 +206,23 @@
 
 	<div class="head">
 		<a href ="index.html"><h1 class="head_item_logo">M BLOCK</h1></a>
-		<p class="head_item">Business</p>
-		<p class="head_item">Portfolio</p>
-		<p class="head_item">Customer</p>
-		<p class="head_item">Admin</p>
+		<ul id="nav">
+				<li><a href=#>Business</a>
+					<ul>
+						<li><a href="#">사업 소개</a></li>
+						<li><a href="Crew.html">Member</a></li>
+						<li><a href="#">Member</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Portfolio</a>
+					<ul>
+						<li><a href="AnalyzedBoard.html">Analyzed Board</a></li>
+						<li><a href="InvestedBoard.html">Invested Board</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Customer</a></li>
+				<li><a href="Login.html">Admin</a></li>
+		</ul>
 	</div>
 
 	<div id="crewTop">
