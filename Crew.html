@@ -71,6 +71,7 @@ a {
 
 		#head{
 			position: fixed;
+			background-color: white;
 		}
 		.head_item_logo{
 			float: left;
@@ -87,16 +88,18 @@ a {
 		}
 		#nav{
 			list-style: none;
-			height: 40px;
-			padding:5px 1px;
-			margin:0;
+			height: 50px;
+			padding:20px 1px;
+			margin:0px;
+			background-color: white;
+
 		}
 
 		#nav li{
 			float: right;
-			margin:15px 20px;
+			margin:0px 20px;
 			width: 140px;
-			padding:0;
+			padding:0px;
 		}
 
 		#nav li a{
@@ -113,12 +116,12 @@ a {
 		#nav li:hover > a {
 			color:black;
 			margin:0;
-			padding:; 5px;
+			padding: 5px;
 		}
 
 		#nav li:hover ul{
 			opacity: 1;
-			height:120px;
+			height:0px;
 		}
 
 		#nav li:hover ul li{
@@ -157,27 +160,27 @@ a {
 		}
 
 		#crewTop {
-			margin-top: 70px;
+			padding-top: 50px;
 			background-color: white;
 			clear: both;
-			padding-bottom: 50px;
+			padding-bottom: 100px;
 		}
 
 		#crewBody {
 			margin-top: 50px;
-			padding-top: 70px;
-			background-color: #ecf1eaff;
 			clear: both;
-			padding-bottom: 500px;
+			height:100%;
+			width:100%;
+			
 		}
 
 		.CrewCard {
 			  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 			  transition: 0.3s;
 			  width: 300px;
-			  background-color: #eeebebff;
 			  text-align: center;
 			  margin-left: 40px;
+			  margin-bottom: 24px;
 
 			}
 
@@ -197,14 +200,16 @@ a {
 		}
 
 		.item{
+			padding-top:70px;
 			float: left;
-			margin-right: 10px;
+			padding-right: 10px;
+
 		}
 	</style>
 </head>
-<body id="parent">
+<body id="parent" style="background-color:#ecf1eaff;">
 
-	<div class="head">
+	<div class="head" style="background-color: white">
 		<a href ="index.html"><h1 class="head_item_logo">M BLOCK</h1></a>
 		<ul id="nav">
 				<li><a href=#>Business</a>
@@ -231,9 +236,11 @@ a {
 	</div>
 
 
+	<div style="background-color: #ecf1eaff;">
 	<script type="text/javascript">
 		  createDIV();
 	</script>
+	</div>
 
 </body>
 </html>
