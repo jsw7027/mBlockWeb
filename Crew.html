@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+
+
+  function createDIV(){
+
+
+      var myArray = [ {'이미지' : 'photo.png', '이름' : 'eric han', '세부설명' : '010 1111 1111'}, 
+                      {'이미지' : 'photo.png', '이름' : 'eric han', '세부설명' : '010 1111 1111'}, 
+                      {'이미지' : 'photo.png', '이름' : 'dennis jung', '세부설명' : '010 1111 1111'},
+                      {'이미지' : 'photo.png', '이름' : 'minsu park', '세부설명' : '010 1111 1111'} ]
+
+
+      var obj = document.getElementById("parent");
+      var crewBody = document.createElement("div");
+
+      for(var i =0; i<myArray.length;i++){
+        var cardDiv = document.createElement("div");
+        var newDiv = document.createElement("div");
+        var img = document.createElement("img");
+        var containerDiv = document.createElement("div");
+        var name = document.createElement("h4");
+        var intro = document.createElement("p");
+
+
+        img.src = myArray[i].이미지;
+        name.innerHTML = myArray[i].이름;
+        intro.innerHTML = myArray[i].세부설명;
+
+        cardDiv.setAttribute("class", "item");
+        img.setAttribute("class", "image")
+        containerDiv.setAttribute("class", "crewContainer");
+        newDiv.setAttribute("class", "CrewCard")
+        crewBody.setAttribute("id", "crewBody");
+    
+        containerDiv.appendChild(name);
+        containerDiv.appendChild(intro);
+
+        newDiv.appendChild(img);
+        newDiv.appendChild(containerDiv);
+
+        cardDiv.appendChild(newDiv);
+        crewBody.appendChild(cardDiv);
+
+      }
+
+      obj.appendChild(crewBody);
+        
+
+
+      // 익명 함수 : 바로 그 이벤트를 실행하기위해 이름을 정하지 않고 바로실행
+      newDiv.onclick = function(){
+          p = this.parentElement; //부모 HTML 태그요소
+
+          p.removeChild(this); // 자신을 부모 태그로 부터 제거   
+      }
+
+  } 
+
+
+</script>
+
+	<style type="text/css">
+
+		a{
+			text-decoration: none;
+		}
+
+		.head_item_logo{
+			float: left;
+			margin-right: 700px;
+			padding-left: 60px;
+			color: black;
+		}
+
+		.head_item{
+			padding-top: 10px;
+			float: left;
+			margin-right: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			margin-bottom: 80px;
+
+		}
+
+		#crewTop {
+			margin-top: 70px;
+			background-color: white;
+			clear: both;
+			padding-bottom: 50px;
+		}
+
+		#crewBody {
+			margin-top: 50px;
+			padding-top: 70px;
+			background-color: #ecf1eaff;
+			clear: both;
+			padding-bottom: 500px;
+		}
+
+		.CrewCard {
+			  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			  transition: 0.3s;
+			  width: 300px;
+			  background-color: #eeebebff;
+			  text-align: center;
+			  margin-left: 40px;
+
+			}
+
+		.CrewCard:hover {
+		  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.crewContainer {
+		  padding: 2px 16px;
+		}
+
+
+		.image{
+			margin-top: 20px;
+		  	width: 80%; 
+		  	height: 300px;
+		}
+
+		.item{
+			float: left;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body id="parent">
+
+	<div class="head">
+		<a href ="index.html"><h1 class="head_item_logo">M BLOCK</h1></a>
+		<p class="head_item">Business</p>
+		<p class="head_item">Portfolio</p>
+		<p class="head_item">Customer</p>
+		<p class="head_item">Admin</p>
+	</div>
+
+	<div id="crewTop">
+		<h1 style="padding-top: 50px; text-align: center;"> C R E W</h1>
+		<hr style="width: 60%; border-top-width: 5px">
+	</div>
+
+
+	<script type="text/javascript">
+		  createDIV();
+	</script>
+
+</body>
+</html>

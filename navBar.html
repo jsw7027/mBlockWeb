@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#nav{
+			list-style: none;
+			height: 40px;
+			padding:5px 1px;
+			margin:0;
+		}
+
+		#nav li{
+			float: right;
+			margin:5px 40px;
+			padding:0;
+
+		}
+
+		#nav li a{
+			display: block;
+			font-weight: bold;
+			font-size: 18px;
+			padding: 7px 8px;
+			margin:0;
+			text-decoration: none;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+		}
+
+		#nav li:hover > a {
+			color:black;
+			margin:0;
+			padding:; 5px;
+		}
+
+		#nav li:hover ul{
+			opacity: 1;
+		}
+
+		#nav li:hover ul li{
+			height: 35px;
+			overflow: visible;
+			padding=0;
+		}
+
+		#nav ul{
+			list-style: none;
+			padding:0;
+			position: absolute;
+			left:0;
+			top:40px;
+			width: 225px;
+			opacity: 0;
+		}
+
+		#nav ul li {
+			float: none;
+			margin:0;
+			margin-top: 15px;
+			padding: 0;
+			font-size: 10px;
+		}
+
+		#nav ul a{
+			font-weight: normal;
+			color: black;
+		}
+
+		#nav ul li:hover a{
+			font-weight: bold;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<ul id="nav">
+		<li><a href=#>Business</a>
+			<ul>
+				<li><a href="#">사업 소개</a></li>
+				<li><a href="#">Member</a></li>
+				<li><a href="#">Member</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Portfolio</a>
+			<ul>
+				<li><a href="#">Analyzed Board</a></li>
+				<li><a href="#">Invested Board</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Customer</a></li>
+		<li><a href="#">Admin</a></li>
+	</ul>
+
+</body>
+</html>

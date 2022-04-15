@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+
+
+  function createDIV(){
+
+
+      var myArray = [ {'이미지' : 'photo.png', '이름' : '20', '세부설명' : '남'}, 
+                      {'이미지' : 'photo.png', '이름' : '25', '세부설명' : '여'}, 
+                      {'이미지' : 'photo.png', '이름' : '30', '세부설명' : '여'}, ]
+
+
+      var obj = document.getElementById("parent");
+      var crewBody = document.createElement("div");
+
+      for(var i =0; i<3;i++){
+        var cardDiv = document.createElement("div");
+        var newDiv = document.createElement("div");
+        var img = document.createElement("img");
+        var containerDiv = document.createElement("div");
+        var name = document.createElement("h4");
+        var intro = document.createElement("p");
+
+
+        img.src = myArray[i].이미지;
+        name.innerHTML = myArray[i].이름;
+        intro.innerHTML = myArray[i].세부설명;
+
+        cardDiv.setAttribute("class", "item");
+        img.setAttribute("class", "image")
+        containerDiv.setAttribute("class", "crewContainer");
+        newDiv.setAttribute("class", "CrewCard")
+        crewBody.setAttribute("class", "crewBody");
+    
+        containerDiv.appendChild(name);
+        containerDiv.appendChild(intro);
+
+        newDiv.appendChild(img);
+        newDiv.appendChild(containerDiv);
+
+        cardDiv.appendChild(newDiv);
+        crewBody.appendChild(cardDiv);
+
+      }
+
+      obj.appendChild(crewBody);
+        
+
+
+      // 익명 함수 : 바로 그 이벤트를 실행하기위해 이름을 정하지 않고 바로실행
+      newDiv.onclick = function(){
+          p = this.parentElement; //부모 HTML 태그요소
+
+          p.removeChild(this); // 자신을 부모 태그로 부터 제거   
+      }
+
+  } 
+
+</script>
+
+
+
+
+
+<style>
+
+.item{
+  float: left;
+  margin-right: 70px;
+}
+
+.CrewCard {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  text-align: center;
+}
+
+.CrewCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.crewContainer {
+  padding: 2px 16px;
+}
+
+.image{
+  margin-top: 10px;
+  width: 80%; 
+  height: 150px;
+}
+</style>
+</head>
+<body id="parent">
+
+
+
+<!--  <a href="javascript:createDIV()">DIV 생성</a><p></p> -->
+
+<!--   <div class ="item">
+
+    <div class="CrewCard">
+      <img src="photo.png" alt="Avatar" style="width: 80%; height: 300px;">
+      <div class="crewContainer">
+        <h4><b>이름</b></h4> 
+        <p>세부내용</p> 
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class ="item">
+
+    <div class="CrewCard">
+      <img src="photo.png" alt="Avatar" style="width: 80%; height: 300px;">
+      <div class="crewContainer">
+        <h4><b>이름</b></h4> 
+        <p>세부내용</p> 
+      </div>
+    </div>
+
+  </div> -->
+
+<script type="text/javascript">
+  createDIV();
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+
+		var userData = [{'userId' : 'mblock', 'password' : "admin"},
+						{'userId' : 'admin', 'password' : "mblock"},
+						{'userId' : 'appLinkers', 'password' : "1111"},
+						{'userId' : 'eric', 'password' : "1111"},]
+
+		function login(){
+
+			var userId = document.getElementById("userId").value;
+			var userPw = document.getElementById("userPw").value;
+			var login = false;
+			var i =0;
+
+
+			while(!login){
+
+				if(userId === userData[i].userId){
+					if(userPw === userData[i].password){
+						login = true;
+						
+					}else{
+						login = false;
+					}
+				}else{
+					login = false;
+				}
+				i++;
+			}
+
+			if(login){
+				alert("login success");
+				location.href="managerWeb.html"
+			}else{
+				alert("login failed")
+			}
+
+
+			
+
+		}
+
+		
+		
+	</script>
+
+	<style type="text/css">
+
+		#loginForm{
+			border-radius: 20px;
+  			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  			transition: 0.3s;
+  			width: 500px;
+  			text-align: center;
+  			margin: 100px auto;
+
+		}
+
+
+
+		body{
+			text-align: center;
+			margin-top: 100px;
+		}
+
+		.userInput{
+			height: 40px; width: 220px; font-size: 17px; padding-left: 10px; border-radius: 20px
+		}
+
+
+	</style>
+</head>
+<body style="height: 1000px;">
+
+	<div>
+		<img src="mblockLogo.png">
+	</div>
+
+	<div id="loginForm">
+		<br>
+		<h1 style="">Manager Web Login</h1><br>
+		<input type="text" id="userId" class="userInput" name="" placeholder="아이디" ><br><br>
+		<input type="password" id="userPw" class="userInput" name="" placeholder="비밀번호" ><br><br>
+		<input type="button" name="로그인" value="LOGIN" onclick="login()" style="width:100px;background-color: #ecf1eaff; height: 40px; border-radius: 8px"><br><br><br>
+	</div>
+
+</body>
+</html>
