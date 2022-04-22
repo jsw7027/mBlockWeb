@@ -41,8 +41,14 @@
 			}
 
 
-			
+		}
 
+		function enterkey() {
+        if (window.event.keyCode == 13) {
+ 
+             // 엔터키가 눌렸을 때 실행할 내용
+             login();
+        	}
 		}
 
 		
@@ -84,8 +90,8 @@
 	<div id="loginForm">
 		<br>
 		<h1 style="">Manager Web Login</h1><br>
-		<input type="text" id="userId" class="userInput" name="" placeholder="아이디" ><br><br>
-		<input type="password" id="userPw" class="userInput" name="" placeholder="비밀번호" ><br><br>
+		<input type="text" id="userId" class="userInput" name="" placeholder="아이디" onkeyup="enterkey();" ><br><br>
+		<input type="password" id="userPw" class="userInput" name="" placeholder="비밀번호" onkeyup="enterkey();" ><br><br>
 		<input type="button" name="로그인" value="LOGIN" onclick="login()" style="width:100px;background-color: #ecf1eaff; height: 40px; border-radius: 8px"><br><br><br>
 	</div>
 
